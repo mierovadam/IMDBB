@@ -5,7 +5,7 @@ class ApiService {
     
     func getMoviesData(completion: @escaping (Result<Response, Error>) -> Void) {
             
-        //page progresses as user reaches end of the table
+        //Page progresses as user reaches end of the table
         let url = "https://api.themoviedb.org/3/movie/popular?api_key=4e0be2c22f7268edffde97481d49064a&language=en-US&page=" + String(pageRead)
 
         URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data,response,error in

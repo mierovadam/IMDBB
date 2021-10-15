@@ -20,6 +20,9 @@ class MovieTableViewCell: UITableViewCell {
     // Update the UI Views
     private func updateUI(title: String?, releaseDate: String?, rating: Double?, overview: String?, poster: String?) {
         
+        // Before downloading the image we clear out the old one
+        self.moviePoster.image = nil
+        
         self.movieTitle.text = title
         self.movieYear.text = utils.convertDateFormater(releaseDate)
         guard let rate = rating else {return}
@@ -34,13 +37,10 @@ class MovieTableViewCell: UITableViewCell {
             return
         }
         
-        // Before we download the image we clear out the old one
-        self.moviePoster.image = nil
-        
         getImageDataFrom(url: posterImageURL)
     }
     
-    // MARK: - Get image data
+    //Get image data
     private func getImageDataFrom(url: URL) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             // Handle Error

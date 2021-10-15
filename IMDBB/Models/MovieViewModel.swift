@@ -3,10 +3,8 @@ import Foundation
 class MovieViewModel {
     private var apiService = ApiService()
     private var moviesData = [Movie]()
-    
 
     func fetchPopularMoviesData(completion: @escaping () -> ()) {
-
         apiService.getMoviesData { [weak self] (result) in
             switch result {
             case .success(let listOf):
@@ -17,7 +15,6 @@ class MovieViewModel {
                 }
                 completion()
             case .failure(let error):
-                // Something is wrong with the JSON file or the model
                 print("Error processing json data: \(error)")
             }
         }

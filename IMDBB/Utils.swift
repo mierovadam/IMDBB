@@ -1,10 +1,3 @@
-//
-//  Utils.swift
-//  IMDBB
-//
-//  Created by Adam Mierov on 13/10/2021.
-//
-
 import Foundation
 
 class Utils  {
