@@ -3,6 +3,7 @@
 iOS app using TMDB api and present data in an infinite tableview
 
 Main screen
+
 ![Screen Shot 2021-10-15 at 15 52 27](https://user-images.githubusercontent.com/49271686/137489865-d30c554e-11c9-447d-8637-11fcbd3abe18.png)
 
 
